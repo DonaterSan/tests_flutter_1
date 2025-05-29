@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/crypto_provider.dart';
 
-class CryptoListScreen {
+class CryptoListScreen extends ConsumerWidget{
   const CryptoListScreen({super.key});
 
   @override 
@@ -20,7 +20,7 @@ class CryptoListScreen {
               leading: Image.network(crypto.image, width: 32),
               title: Text(crypto.name),
               subtitle: Text(crypto.symbol.toUpperCase()),
-              trailing: Text('\$${crypto.current_price.toStringAsFixed(2)}'),
+              trailing: Text('\$${crypto.currentPrice.toStringAsFixed(2)}'),
             );
           },
         ), 
